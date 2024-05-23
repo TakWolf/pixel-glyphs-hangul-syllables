@@ -1,10 +1,10 @@
-import os
+from pathlib import Path
 
-project_root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+project_root_dir = Path(__file__).parent.joinpath('..', '..').resolve()
 
-assets_dir = os.path.join(project_root_dir, 'assets')
-fragments_dir = os.path.join(assets_dir, 'fragments')
+assets_dir = project_root_dir.joinpath('assets')
+fragments_dir = assets_dir.joinpath('fragments')
 
-build_dir = os.path.join(project_root_dir, 'build')
-outputs_dir = os.path.join(build_dir, 'outputs')
-releases_dir = os.path.join(build_dir, 'releases')
+build_dir = project_root_dir.joinpath('build')
+outputs_dir = build_dir.joinpath('outputs')
+releases_dir = build_dir.joinpath('releases')

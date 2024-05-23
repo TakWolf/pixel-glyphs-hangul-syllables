@@ -1,13 +1,12 @@
-import os
 import shutil
 import tomllib
+from pathlib import Path
 
 
-def delete_dir(path: str | bytes | os.PathLike[str] | os.PathLike[bytes]):
-    if os.path.exists(path):
+def delete_dir(path: Path):
+    if path.exists():
         shutil.rmtree(path)
 
 
-def read_toml(path: str | bytes | os.PathLike[str] | os.PathLike[bytes]) -> dict:
-    with open(path, 'r', encoding='utf-8') as file:
-        return tomllib.loads(file.read())
+def read_toml(path: Path) -> dict:
+    return tomllib.loads(path.read_text('utf-8'))
