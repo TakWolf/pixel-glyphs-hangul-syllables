@@ -18,6 +18,5 @@ def make_release_zip(font_size: int):
                 if not file_name.endswith('.png'):
                     continue
                 file_path = file_dir.joinpath(file_name)
-                arc_path = file_path.relative_to(outputs_dir)
-                file.write(file_path, arc_path)
+                file.write(file_path, file_path.relative_to(outputs_dir))
     logger.info("Make release zip: '%s'", zip_file_path)
