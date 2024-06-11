@@ -1,3 +1,3 @@
 import logging
 
-logger = logging.getLogger('glyph_service')
+logger = logging.getLogger(__name__)
