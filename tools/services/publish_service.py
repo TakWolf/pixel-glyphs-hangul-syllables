@@ -1,8 +1,8 @@
 import logging
 import zipfile
 
-from scripts import configs
-from scripts.configs import path_define
+from tools import configs
+from tools.configs import path_define
 
 logger = logging.getLogger(__name__)
 

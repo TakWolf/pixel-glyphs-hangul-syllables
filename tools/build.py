@@ -1,7 +1,7 @@
-from scripts import configs
-from scripts.configs import path_define
-from scripts.services import glyph_service, publish_service
-from scripts.utils import fs_util
+from tools import configs
+from tools.configs import path_define
+from tools.services import publish_service
+from tools.utils import fs_util
 
 
 def main():
