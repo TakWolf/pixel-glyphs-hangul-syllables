@@ -1,10 +1,7 @@
-import logging
 import zipfile
 
 from tools import configs
 from tools.configs import path_define
-
-logger = logging.getLogger(__name__)
 
 
 def make_release_zip(font_size: int):
@@ -19,4 +16,4 @@ def make_release_zip(font_size: int):
                     continue
                 file_path = file_dir.joinpath(file_name)
                 file.write(file_path, file_path.relative_to(outputs_dir))
-    logger.info("Make release zip: '%s'", zip_file_path)
+    print(f"Make release zip: '{zip_file_path}'")
