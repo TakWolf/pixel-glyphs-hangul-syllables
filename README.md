@@ -1,5 +1,9 @@
 # 像素字形 - 谚文音节
 
+[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](https://openfontlicense.org)
+[![License MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/license/MIT)
+[![Releases](https://img.shields.io/github/v/release/TakWolf/pixel-glyphs-hangul-syllables)](https://github.com/TakWolf/pixel-glyphs-hangul-syllables/releases)
+
 Unicode 区块：AC00 ~ D7AF; Hangul Syllables
 
 ## 原理
