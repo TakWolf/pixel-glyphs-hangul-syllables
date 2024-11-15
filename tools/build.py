@@ -10,7 +10,7 @@ def main():
         shutil.rmtree(path_define.build_dir)
 
     for font_size in configs.font_sizes:
-        glyph_service.make_patterns(font_size)
+        glyph_service.make_glyphs(font_size)
         publish_service.make_release_zip(font_size)
 
 
