@@ -1,5 +1,7 @@
 import zipfile
 
+from loguru import logger
+
 from tools import configs
 from tools.configs import path_define, FontSize
 
@@ -16,4 +18,4 @@ def make_release_zip(font_size: FontSize):
                     continue
                 file_path = file_dir.joinpath(file_name)
                 file.write(file_path, file_path.relative_to(outputs_dir))
-    print(f"Make release zip: '{zip_file_path}'")
+    logger.info("Make release zip: '{}'", zip_file_path)

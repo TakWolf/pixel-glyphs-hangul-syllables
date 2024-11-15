@@ -47,3 +47,4 @@ Unicode 区块：AC00 ~ D7AF; Hangul Syllables
 ## 程序依赖
 
 - [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
+- [Loguru](https://github.com/Delgan/loguru)
