@@ -7,6 +7,15 @@ import png
 
 class PartBitmap(UserList[list[int]]):
     @staticmethod
+    def create(width: int, height: int, alpha: int = 0) -> 'PartBitmap':
+        bitmap = PartBitmap()
+        bitmap.width = width
+        bitmap.height = height
+        for _ in range(height):
+            bitmap.append([alpha if alpha == -1 or alpha == 0 else 1] * width)
+        return bitmap
+
+    @staticmethod
     def load_png(file_path: str | PathLike[str]) -> 'PartBitmap':
         width, height, pixels, _ = png.Reader(filename=file_path).read()
         bitmap = PartBitmap()
@@ -50,6 +59,14 @@ class PartBitmap(UserList[list[int]]):
                     self.height == other.height and
                     super().__eq__(other))
         return super().__eq__(other)
+
+    def copy(self) -> 'PartBitmap':
+        bitmap = PartBitmap()
+        for bitmap_row in self:
+            bitmap.append(bitmap_row[:])
+        bitmap.width = self.width
+        bitmap.height = self.height
+        return bitmap
 
     def save_png(self, file_path: str | PathLike[str]):
         pixels = []
