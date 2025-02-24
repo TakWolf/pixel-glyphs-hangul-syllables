@@ -32,7 +32,12 @@ Unicode 区块：AC00 ~ D7AF; Hangul Syllables
 
 在 Unicode 区块中，谚文音节按照规律依次排列。也就是说，按照上面的顺序进行排列组合，即可遍历全部的 `19 * 21 * (27 + 1) = 11172` 个音节字符。
 
-## 授权信息
+## 程序依赖
+
+- [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
+- [Loguru](https://github.com/Delgan/loguru)
+
+## 许可证
 
 分为「字形」和「程序」两个部分。
 
@@ -43,8 +48,3 @@ Unicode 区块：AC00 ~ D7AF; Hangul Syllables
 ### 程序
 
 使用 [「MIT 许可证」](LICENSE-MIT) 授权。
-
-## 程序依赖
-
-- [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
-- [Loguru](https://github.com/Delgan/loguru)
