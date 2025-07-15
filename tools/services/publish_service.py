@@ -3,7 +3,8 @@ import zipfile
 from loguru import logger
 
 from tools import configs
-from tools.configs import path_define, FontSize
+from tools.configs import path_define
+from tools.configs.options import FontSize
 
 
 def make_release_zip(font_size: FontSize):
