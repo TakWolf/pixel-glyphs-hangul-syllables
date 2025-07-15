@@ -9,6 +9,7 @@ from tools.configs.options import FontSize
 
 def make_release_zip(font_size: FontSize):
     path_define.releases_dir.mkdir(parents=True, exist_ok=True)
+
     zip_file_path = path_define.releases_dir.joinpath(f'pixel-glyphs-hangul-syllables-{font_size}px-v{configs.version}.zip')
     with zipfile.ZipFile(zip_file_path, 'w') as file:
         file.write(path_define.project_root_dir.joinpath('LICENSE-OFL'), 'OFL.txt')
