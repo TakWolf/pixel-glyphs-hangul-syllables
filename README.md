@@ -4,7 +4,7 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE-MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/pixel-glyphs-hangul-syllables)](https://github.com/TakWolf/pixel-glyphs-hangul-syllables/releases)
 
-Unicode 区块：AC00 ~ D7AF; Hangul Syllables
+`AC00 ~ D7AF; Hangul Syllables`
 
 ## 原理
 
