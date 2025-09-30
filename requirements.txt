@@ -1,2 +1,2 @@
-pixel-font-knife==0.0.16
+pixel-font-knife==0.0.17
 loguru==0.7.3
