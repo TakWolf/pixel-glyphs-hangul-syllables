@@ -1,4 +1,4 @@
-import zipfile
+from zipfile import ZipFile
 
 from loguru import logger
 
@@ -11,7 +11,7 @@ def make_release_zip(font_size: FontSize):
     path_define.releases_dir.mkdir(parents=True, exist_ok=True)
 
     zip_file_path = path_define.releases_dir.joinpath(f'pixel-glyphs-hangul-syllables-{font_size}px-v{configs.version}.zip')
-    with zipfile.ZipFile(zip_file_path, 'w') as file:
+    with ZipFile(zip_file_path, 'w') as file:
         file.write(path_define.project_root_dir.joinpath('LICENSE-OFL'), 'OFL.txt')
 
         outputs_dir = path_define.outputs_dir.joinpath(str(font_size))
