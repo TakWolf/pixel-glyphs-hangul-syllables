@@ -43,8 +43,8 @@
 
 ### 字形
 
-使用 [「SIL 开放字体许可证第 1.1 版」](LICENSE-OFL) 授权。
+采用 [SIL Open Font License version 1.1](LICENSE-OFL) 授权。
 
 ### 程序
 
-使用 [「MIT 许可证」](LICENSE-MIT) 授权。
+采用 [MIT License](LICENSE-MIT) 授权。
