@@ -5,4 +5,4 @@ type FontSize = Literal[
     12,
     16,
 ]
-font_sizes = list[FontSize](get_args(FontSize.__value__))
+FONT_SIZES = list[FontSize](get_args(FontSize.__value__))
