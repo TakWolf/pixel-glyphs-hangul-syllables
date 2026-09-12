@@ -40,19 +40,19 @@ def _get_vowel_layout_type_by_chr(c: str) -> VowelLayoutType:
 
 class LeadingJamo:
     @staticmethod
-    def of(index: int):
+    def of(index: int) -> 'LeadingJamo':
         c = LEADING_JAMOS[index]
         return LeadingJamo(c)
 
     c: str
 
-    def __init__(self, c: str):
+    def __init__(self, c: str) -> None:
         self.c = c
 
 
 class VowelJamo:
     @staticmethod
-    def of(index: int):
+    def of(index: int) -> 'VowelJamo':
         c = VOWEL_JAMOS[index]
         layout_type = _get_vowel_layout_type_by_chr(c)
         return VowelJamo(c, layout_type)
@@ -60,20 +60,20 @@ class VowelJamo:
     c: str
     layout_type: VowelLayoutType
 
-    def __init__(self, c: str, layout_type: VowelLayoutType):
+    def __init__(self, c: str, layout_type: VowelLayoutType) -> None:
         self.c = c
         self.layout_type = layout_type
 
 
 class TrailingJamo:
     @staticmethod
-    def of(index: int):
+    def of(index: int) -> 'TrailingJamo':
         c = TRAILING_JAMOS[index]
         return TrailingJamo(c)
 
     c: str
 
-    def __init__(self, c: str):
+    def __init__(self, c: str) -> None:
         self.c = c
 
 
@@ -103,7 +103,7 @@ class Syllable:
             leading_jamo: LeadingJamo,
             vowel_jamo: VowelJamo,
             trailing_jamo: TrailingJamo | None = None,
-    ):
+    ) -> None:
         self.code_point = code_point
         self.leading_jamo = leading_jamo
         self.vowel_jamo = vowel_jamo

@@ -7,7 +7,7 @@ from tools.configs import path_define
 from tools.configs.options import FontSize
 
 
-def make_release_zip(font_size: FontSize):
+def make_release_zip(font_size: FontSize) -> None:
     path_define.RELEASES_DIR.mkdir(parents=True, exist_ok=True)
 
     zip_file_path = path_define.RELEASES_DIR.joinpath(f'pixel-glyphs-hangul-syllables-{font_size}px-v{configs.VERSION}.zip')

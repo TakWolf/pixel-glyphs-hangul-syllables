@@ -5,7 +5,7 @@ from tools.configs import path_define, FontSize
 from tools.utils import hangul_util
 
 
-def make_glyphs(font_size: FontSize):
+def make_glyphs(font_size: FontSize) -> None:
     outputs_dir = path_define.OUTPUTS_DIR.joinpath(str(font_size), 'AC00-D7AF Hangul Syllables')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
