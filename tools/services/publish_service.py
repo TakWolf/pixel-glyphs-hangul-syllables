@@ -19,6 +19,7 @@ def make_release_zip(font_size: FontSize) -> None:
             for file_name in file_names:
                 if not file_name.endswith('.png'):
                     continue
+
                 file_path = file_dir.joinpath(file_name)
                 file.write(file_path, file_path.relative_to(outputs_dir))
     logger.info("Make release zip: '{}'", zip_file_path)
