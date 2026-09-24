@@ -19,4 +19,4 @@ def make_release_zip(font_size: FontSize) -> None:
             if not file_path.is_file():
                 continue
             file.write(file_path, file_path.relative_to(outputs_dir))
-    logger.info("Make release zip: '{}'", zip_file_path)
+    logger.info('Make release zip: {!r}', str(zip_file_path))
