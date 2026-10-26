@@ -1,16 +1,16 @@
 import shutil
 
-from tools.configs import path_define, options
+from tools.config import paths, options
 from tools.services import glyph_service, publish_service
 
 
 def main() -> None:
-    if path_define.BUILD_DIR.exists():
-        shutil.rmtree(path_define.BUILD_DIR)
+    if paths.BUILD_DIR.exists():
+        shutil.rmtree(paths.BUILD_DIR)
 
-    for font_size in options.FONT_SIZES:
-        glyph_service.make_glyphs(font_size)
-        publish_service.make_release_zip(font_size)
+    for glyph_spec in options.GLYPH_SPECS:
+        glyph_service.make_glyphs(glyph_spec)
+        publish_service.make_release_zip(glyph_spec)
 
 
 if __name__ == '__main__':

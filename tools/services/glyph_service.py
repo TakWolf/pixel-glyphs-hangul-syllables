@@ -1,15 +1,13 @@
 from loguru import logger
-from pixel_font_knife.bitmap.mono_bitmap import MonoBitmap
 
-from tools.configs import path_define, FontSize
-from tools.utils import hangul_util
+from tools.config import paths
+from tools.config.spec import GlyphSpec
 
 
-def make_glyphs(font_size: FontSize) -> None:
-    outputs_dir = path_define.OUTPUTS_DIR.joinpath(str(font_size), 'AC00-D7AF Hangul Syllables')
+def make_glyphs(glyph_spec: GlyphSpec) -> None:
+    outputs_dir = paths.OUTPUTS_DIR.joinpath(f'{glyph_spec.glyph_size}-{glyph_spec.glyph_style}', 'AC00-D7AF Hangul Syllables')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
-    for syllable in hangul_util.iter_syllables():
-        canvas = MonoBitmap.blank(font_size, font_size)
-        canvas.save_png(outputs_dir.joinpath(f'{syllable.code_point:04X}.png'))
-    logger.info("Make glyphs: {}px", font_size)
+    # TODO
+
+    logger.info("Make glyphs: {}px {}", glyph_spec.glyph_size, glyph_spec.glyph_style)
