@@ -4,6 +4,6 @@ version = "0.0.0"
 requires-python = ">=3.15"
 
 dependencies = [
-    "pixel-font-knife==0.0.31",
+    "pixel-font-knife==0.0.34",
     "loguru==0.7.3",
 ]
