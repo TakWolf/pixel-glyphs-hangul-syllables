@@ -10,4 +10,4 @@ def make_glyphs(glyph_spec: GlyphSpec) -> None:
 
     # TODO
 
-    logger.info("Make glyphs: {}px {}", glyph_spec.glyph_size, glyph_spec.glyph_style)
+    logger.info('Make glyphs: {}px {}', glyph_spec.glyph_size, glyph_spec.glyph_style)
